@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,116 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsK-AY-buw">
+                                <rect key="frame" x="50" y="40" width="500" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QvM-9o-djs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9to-dq-Hqx" userLabel="TwoTap">
+                                <rect key="frame" x="420" y="81" width="130" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Two tap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJC-ST-fiR">
+                                        <rect key="frame" x="0.0" y="54" width="130" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.66102944129999996" green="0.73782438179999998" blue="0.91631217279999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Seg-0H-0Wu"/>
+                                    <constraint firstAttribute="width" constant="130" id="zyD-TU-KbQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1R-72-gIO" userLabel="OneTap">
+                                <rect key="frame" x="50" y="81" width="130" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="One tap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EN8-6Y-f7K">
+                                        <rect key="frame" x="0.0" y="54" width="130" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.66102944129999996" green="0.73782438179999998" blue="0.91631217279999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Cvk-b0-b9t"/>
+                                    <constraint firstAttribute="height" constant="130" id="eb6-SO-afL"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uYw-6D-Bas" appends="YES" id="qZR-hI-r5v"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iec-gg-zo6" userLabel="SwipeUp">
+                                <rect key="frame" x="50" y="241" width="130" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxO-Fw-aS9">
+                                        <rect key="frame" x="0.0" y="54" width="130" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.66102944129999996" green="0.73782438179999998" blue="0.91631217279999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="X37-be-xnE"/>
+                                    <constraint firstAttribute="width" constant="130" id="bbI-4M-iz6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2e-hL-z4z" userLabel="SwipeDown">
+                                <rect key="frame" x="420" y="241" width="130" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe down" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpb-Yl-SaJ">
+                                        <rect key="frame" x="0.0" y="54" width="130" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.66102944129999996" green="0.73782438179999998" blue="0.91631217279999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="DJA-H9-1pV"/>
+                                    <constraint firstAttribute="height" constant="130" id="qVn-0l-ET1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Iec-gg-zo6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="5W7-Sz-TfD"/>
+                            <constraint firstItem="Q2e-hL-z4z" firstAttribute="top" secondItem="9to-dq-Hqx" secondAttribute="bottom" constant="30" id="9Dh-oJ-RmX"/>
+                            <constraint firstItem="9to-dq-Hqx" firstAttribute="top" secondItem="GsK-AY-buw" secondAttribute="bottom" constant="20" id="Ayb-cv-h4f"/>
+                            <constraint firstItem="q1R-72-gIO" firstAttribute="top" secondItem="GsK-AY-buw" secondAttribute="bottom" constant="20" id="Lxm-d1-QT1"/>
+                            <constraint firstItem="q1R-72-gIO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="QTE-QC-har"/>
+                            <constraint firstItem="GsK-AY-buw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="Tu5-PZ-tFK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GsK-AY-buw" secondAttribute="trailing" constant="30" id="UMA-Ou-e6E"/>
+                            <constraint firstItem="GsK-AY-buw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Wq5-Js-ibT"/>
+                            <constraint firstItem="Iec-gg-zo6" firstAttribute="top" secondItem="q1R-72-gIO" secondAttribute="bottom" constant="30" id="osQ-Kb-dUv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q2e-hL-z4z" secondAttribute="trailing" constant="30" id="rkq-go-Cme"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9to-dq-Hqx" secondAttribute="trailing" constant="30" id="sKd-vI-Uk8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="OneTapView" destination="q1R-72-gIO" id="J8o-HQ-5F0"/>
+                        <outlet property="SwipeDown" destination="Q2e-hL-z4z" id="HoM-fK-J34"/>
+                        <outlet property="SwipeUp" destination="Iec-gg-zo6" id="5ty-hu-mn4"/>
+                        <outlet property="TwoTapView" destination="9to-dq-Hqx" id="Qz6-om-vGt"/>
+                        <outlet property="statusLabel" destination="GsK-AY-buw" id="8dO-MF-3HQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uYw-6D-Bas">
+                    <connections>
+                        <action selector="OneTapGuestureAction:" destination="BYZ-38-t0r" id="R2Z-6e-34j"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="565" y="539"/>
         </scene>
     </scenes>
 </document>
